@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="#0F0305">
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/ic_stop"
+        app:tint="@color/crimson_500"
+        android:contentDescription="Alarm Icon" />
+
+    <TextView
+        android:id="@+id/tv_alarm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔋 Charging Limit Reached!"
+        android:textColor="@color/crimson_500"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tv_alarm_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Battery reached 85%"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tv_alarm_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please unplug your charger now to preserve battery health."
+        android:textColor="@color/slate_400"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_stop_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="🛑 STOP ALARM"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/crimson_500"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="40dp" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChargeGuard</string>
+    <string name="app_full_title">ChargeGuard – Battery Charger Alarm</string>
+    <string name="developer_name">muthu krishnann</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_history">History</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Home Screen -->
+    <string name="battery_status_charging">⚡ Charging</string>
+    <string name="battery_status_disconnected">🔌 Disconnected</string>
+    <string name="monitoring_active">🟢 Monitoring Active</string>
+    <string name="test_alarm">🔊 Test Alarm</string>
+    <string name="alarm_limit_format">Alarm Limit: %d%%</string>
+
+    <!-- History Screen -->
+    <string name="charging_history_title">Charging History</string>
+    <string name="clear_history">Clear History</string>
+    <string name="no_history_recorded">No charging sessions recorded yet.\nPlug in your charger to automatically start logging.</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="pref_charge_limit_title">Charging Limit</string>
+    <string name="pref_alarm_sound_title">Alarm Sound</string>
+    <string name="pref_alarm_volume_title">Alarm Volume</string>
+    <string name="pref_vibration_title">Vibrate on Alarm</string>
+    <string name="pref_notifications_title">Show Notifications</string>
+    <string name="pref_history_title">Record Charging History</string>
+    <string name="pref_background_title">Background Battery Monitoring</string>
+    <string name="pref_battery_optimization_desc">Disable Battery Optimization to prevent Android from closing ChargeGuard when minimized.</string>
+    <string name="disable_optimization_btn">Exempt from Battery Saver</string>
+    <string name="theme_title">Theme Mode</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light Theme</string>
+    <string name="theme_dark">Dark Theme</string>
+
+    <!-- Alarm Strings -->
+    <string name="alarm_limit_reached_title">🔋 Charging Limit Reached!</string>
+    <string name="alarm_limit_reached_msg">Please unplug your charger.</string>
+    <string name="alarm_full_charge_title">🔋 Battery Fully Charged!</string>
+    <string name="alarm_full_charge_msg">Please unplug your charger.</string>
+    <string name="stop_alarm">STOP ALARM</string>
+
+    <string name="about_developer">ChargeGuard Native Mobile Application\nCrafted for muthu krishnann</string>
+</resources>
