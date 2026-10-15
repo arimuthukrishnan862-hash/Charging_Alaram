@@ -1,40 +1,15 @@
-name: Build ChargeGuard APK
+buildscript {
+    ext.kotlin_version = '1.9.22'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 
-on:
-  push:
-    branches: [ "main", "master" ]
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout Source Code
-      uses: actions/checkout@v4
-
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
-      with:
-        gradle-version: '8.2'
-
-    - name: Build Debug APK
-      run: gradle assembleDebug --stacktrace
-
-    - name: Collect APK
-      run: |
-        mkdir -p release-output
-        find app/build/outputs/apk/ -name "*.apk" -exec cp {} release-output/ChargeGuard-muthukrishnann.apk \;
-
-    - name: Upload ChargeGuard APK Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: ChargeGuard-muthukrishnann-APK
-        path: release-output/ChargeGuard-muthukrishnann.apk
-        retention-days: 30
+tasks.register('clean', Delete) {
+    delete rootProject.layout.buildDirectory
+}
